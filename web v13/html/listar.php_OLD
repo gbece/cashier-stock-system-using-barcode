@@ -1,0 +1,17 @@
+<?php
+$row = 1;
+if (($handle = fopen("./database/stock.csv", "r")) !== FALSE) {
+	while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+		$num = count($data);
+		$row++;
+		for ($c=0; $c < $num; $c++) {
+			if ($c==0){
+				echo "ID: " . $data[$c];
+			}
+			echo $data[c]=0 ? "ok"  $data[$c] : "no";
+		}
+		echo "<br>";
+	}
+	fclose($handle);
+}
+?>

@@ -1,0 +1,17 @@
+<html>
+<body>
+<?php 
+$modo = shel_exec("gpio -g read 22");
+?>
+		<title>Gestion de STOCK</title>
+	</head>
+	<frameset rows="100,*,30">
+		<frame src="arriba.html"frameborder="0" name="arriba" >
+		<frameset cols="15%,*">
+		     <frame src="izquierda.html" frameborder="0" name="izquierda" >	 
+		     <frame src="derecha.html" frameborder="0" name="derecha">			
+	        </frameset>
+		<frame src="abajo.html" frameborder="0" name="abajo">
+	</frameset>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?php
+
+include 'mysql_conexion.php'; //se inlcuye librria de configuracion del servidor
+
+echo "<h2> Lista de productos en el stock</h2><hr><br>";
+echo "<html><body><table>\n\n";
+
+
+$sql = "SELECT id_producto, codigo, descripcion, precio, cantidad, umbral FROM productos";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+// output data of each row
+	while($row = $result->fetch_assoc()) {
+   		echo "<br> id: ". $row["id_producto"]. " - Codigo: ". $row["codigo"]. " - Descripcion: " . $row["descripcion"] . " - Precio: " . $row["precio"] .  " - Cantidad: " . $row["cantidad"] . " - Umbral " . $row["umbral"]."<br>";
+	}
+} else {
+	echo "0 results";
+}
+$conn->close();
+?> 
+

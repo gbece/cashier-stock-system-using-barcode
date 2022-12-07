@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>izquerda</title>
+<style>
+.center {
+	    padding: 60% 0;
+	    border: 3px;
+}
+
+input.MyButton {
+	width: 150px;
+	padding: 20px;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 100%;
+	background: #3366cc;
+	color: #fff;
+	border: 1px solid #3366cc;
+	border-radius: 10px;
+}
+input.MyButton:hover {
+	color: #ffff00;
+	background: #000;
+	border: 1px solid #fff;
+}
+
+
+</style>
+	</head>
+	<body>
+		<p>
+		<center>
+			<br>
+			<div class="center">
+				<p><form>
+					<input class="MyButton" type="button" value="Buscar" target="derecha"  
+					onclick= "top.frames['derecha'].location.href = 'buscar.php' "/>
+				</form></p>
+				<p><form>
+					<input class="MyButton" type="button" value="Listar" target="derecha"  
+					onclick= "top.frames['derecha'].location.href = 'listar.php' "/>
+				</form></p>
+				<p><form>
+					<input class="MyButton" type="button" value="Transacciones" target="derecha"  
+					onclick= "top.frames['derecha'].location.href = 'transaccion.html' "/>
+				</form></p>
+			</div>
+		</center>
+		</p>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+<?php
+echo "<h2> Lista de transacciones por fecha</h2><hr><br>";
+echo "<html><body><table>\n\n";
+$desde =$_POST["desde"];
+$hasta =$_POST["hasta"];
+$f = fopen("./transacc.csv", "r");
+while (($line = fgetcsv($f)) !== false) {
+		echo "<tr>";
+			foreach ($line as $cell) {
+				if (strtotime($line[0]) >= strtotime($_POST["desde"]) AND strtotime($line[0]) <= strtotime($_POST["hasta"])) 
+					echo "<td>" . htmlspecialchars($cell) . "</td>";
+							}
+			echo "</tr>\n";
+}
+fclose($f);
+echo "\n</table></body></html>";
